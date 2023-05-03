@@ -2,6 +2,9 @@
 #
 #	Installationsscript Modul 129 LAN-Komponenten in Betrieb nehmen
 
+# Netzwerk Bridge mit eigenem DHCP Server
+ curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh | bash -
+
 # Introseite 
 bash -x /opt/lernmaas/helper/intro
 
@@ -42,9 +45,4 @@ curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-
 
 # OpenVPN - braucht br0!, darum erst am Schluss starten
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
-
-# Netzwerk Bridge mit eigenem DHCP Server
- curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh | bash -
-
-sudo netplan generate
-sudo netplan apply && sudo systemctl start openvpn
+sudo systemctl start openvpn
