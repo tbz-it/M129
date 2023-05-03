@@ -43,10 +43,8 @@ curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-
 # OpenVPN - braucht br0!, darum erst am Schluss starten
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
 
-# Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
-sudo apt-get install -y bridge-utils net-tools 
-export ETH=$(ip link | awk -F: '$0 !~ "lo|vir|wl|tap|br|wg|docker0|^[^0-9]"{print $2;getline}')
-export ETH=$(echo $ETH | sed 's/ *$//g')
+# Netzwerk Bridge mit eigenem DHCP Server
+https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh
 
-#sudo netplan generate
-#sudo netplan apply && sudo systemctl start openvpn
+sudo netplan generate
+sudo netplan apply && sudo systemctl start openvpn
