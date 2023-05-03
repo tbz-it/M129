@@ -23,7 +23,7 @@ Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/
   
 ## Links
 
-* [Modulbeschreibung von ICT Berufsbildung](https://www.modulbaukasten.ch/module/145/3/de-DE?title=Netzwerk-betreiben-und-erweitern)
+* [Modulbeschreibung von ICT Berufsbildung](https://www.modulbaukasten.ch/module/129/3/de-DE)
 * [GNS3 Homepage](https://www.gns3.com/)
 * [GNS3 Dokumentation](https://docs.gns3.com/docs/)
 * [GNS3 Appliances](https://gns3.com/marketplace/appliances)
