@@ -1,2 +1,29 @@
-# M129
-Modul 129 LAN-Komponenten in Betrieb nehmen
+# Modul 129 LAN-Komponenten in Betrieb nehmen
+
+### Kompetenz
+
+Netzwerkkomponenten in einer LAN-Umgebung nach Vorgaben und unter Beachtung der Sicherheitsanforderungen in Betrieb nehmen, konfigurieren, testen und abnehmen lassen.
+### Objekt
+
+Switches, 3 Router und drei LAN hintereinander angeordnet
+
+### Infrastruktur (GNS3)
+
+Graphical Network Simulator-3 ist ein Netzwerk-Software-Emulator, der erstmals 2008 veröffentlicht wurde. Er ermöglicht die Kombination von virtuellen und realen Geräten, die zur Simulation komplexer Netzwerke verwendet werden.
+
+Das ist nicht die offizielle GNS3 Umgebung der TBZ, sondern nur eine abgespekte Variante um via Weboberfläche ein paar Layouts erzeugen zu können. Es fehlt IOU und OpenVPN. 
+
+Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/Stud/allgemein/tbzcloud-gns3).
+
+Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/projects#gns3-projekte). Brauchen Nested Virtualization!
+
+**Zugriff auf GNS3 Weboberfläche**
+
+  [http://${ADDR}:3080](http://${ADDR}:3080)
+  
+## Links
+
+* [Modulbeschreibung von ICT Berufsbildung](https://www.modulbaukasten.ch/module/145/3/de-DE?title=Netzwerk-betreiben-und-erweitern)
+* [GNS3 Homepage](https://www.gns3.com/)
+* [GNS3 Dokumentation](https://docs.gns3.com/docs/)
+* [GNS3 Appliances](https://gns3.com/marketplace/appliances)
