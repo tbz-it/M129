@@ -38,7 +38,7 @@ curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "co
 curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-templates.sh | bash -
 
 # TBZ Templates
-# curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-templates.sh | bash -
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-templates.sh | bash -
 
 # OpenVPN - braucht br0!, darum erst am Schluss starten
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
