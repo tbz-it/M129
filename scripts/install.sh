@@ -44,7 +44,7 @@ curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
 
 # Netzwerk Bridge mit eigenem DHCP Server
-https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh | bash -
 
 sudo netplan generate
 sudo netplan apply && sudo systemctl start openvpn
