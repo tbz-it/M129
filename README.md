@@ -15,6 +15,11 @@ Das ist nicht die offizielle GNS3 Umgebung der TBZ, sondern nur eine abgespekte 
 
 Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/Stud/allgemein/tbzcloud-gns3).
 
+**Netzwerke**
+
+* 192.168.23.0/24 - Management Netzwerk ohne Verbindung ins Internet. GNS3 Device Cloud, Anschluss br0
+* 192.168.122.0/24 - NAT Anschluss mit Verbindungs ins Internet. GNS3 Device NAT.
+
 **Zugriff auf GNS3 Weboberfläche**
 
   [http://${ADDR}:3080](http://${ADDR}:3080)
