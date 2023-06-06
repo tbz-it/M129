@@ -3,6 +3,7 @@
 ### Kompetenz
 
 Netzwerkkomponenten in einer LAN-Umgebung nach Vorgaben und unter Beachtung der Sicherheitsanforderungen in Betrieb nehmen, konfigurieren, testen und abnehmen lassen.
+
 ### Objekt
 
 Switches, 3 Router und drei LAN hintereinander angeordnet
@@ -23,6 +24,42 @@ Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/
 **Zugriff auf GNS3 Weboberfläche**
 
   [http://${ADDR}:3080](http://${ADDR}:3080)
+  
+### Feintuning
+  
+**Hyper-V mit Windows und Multipass**
+
+Ist Nested Virtualization (VM in VM) zu aktivieren.
+
+Dazu sind folgende Schritte, in der PowerShell als Administrator, notwendig
+* VM stoppen, z.B. mittels Hyper-V Manager oder Multipass 
+* Nested Virtualization aktivieren
+* VM starten und ggf. IP-Adresse überprüfen.
+
+Die Befehle sind wie folgt: 
+
+    multipass stop gns3-60-default
+    Set-VMProcessor -VMName gns3-60-default -ExposeVirtualizationExtensions $true
+    Get-VMNetworkAdapter -VMName gns3-60-default | Set-VMNetworkAdapter -MacAddressSpoofing On
+    multipass start gns3-60-default
+    
+Um die VM für Hyper-V zu optimieren, sollte der Azure Kernel installiert werden.
+
+    multipass shell gns3-60-default
+    sudo apt-get -y update
+    sudo apt-get -y install linux-azure
+    sudo shutdown -r now
+    
+* [Ubuntu für Hyper-V optimieren](https://blog.daniel.wydler.eu/2020/09/20/ubuntu-20-04-lts-fuer-hyper-v-optimieren/)            
+    
+**Azure, AWS Cloud**
+
+Ist entweder eine [Bare Metal Instanz](https://aws.amazon.com/de/about-aws/whats-new/2021/11/amazon-ec2-bare-metal-instances/) mit dem Cloud-init Script [cloud-init.yaml](cloud-init.yaml) zu verwenden.
+
+Oder die KVM Unterstützung zu deaktivieren. Dazu die Konfigurationsdatei `/opt/gns3/.config/GNS3/2.2/gns3_server.conf` um folgenden Eintrag ergänzen:
+
+    [Qemu]
+    enable_kvm = false  
   
 ## Links
 
